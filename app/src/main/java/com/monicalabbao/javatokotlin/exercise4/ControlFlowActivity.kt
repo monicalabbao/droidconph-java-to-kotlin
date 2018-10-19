@@ -1,5 +1,6 @@
 package com.monicalabbao.javatokotlin.exercise4
 
+import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
 /**
@@ -10,4 +11,35 @@ import android.support.v7.app.AppCompatActivity
 class ControlFlowActivity : AppCompatActivity() {
     //TODO: Select Divine Office Version
     //TODO: Make exercise identifying the selection of different flowers
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        ifStatement()
+        whenStatement("Hannah Tuazon")
+    }
+
+    private fun ifStatement() {
+        var isTrad = false
+        if (isTrad) {
+
+        }
+    }
+
+    /**Returns true if person has attended TLM. False otherwise*/
+    private fun whenStatement(name : String) : Boolean {
+        when(name) {
+            "Paolo Gonzales" -> {
+                return true
+            }
+            "Earl Adrian Hans" -> {
+                return true
+            }
+            "Carl Puray" -> {
+                return false
+            }
+            "Hannah Tuazon" -> {
+                return false
+            }
+        }
+        return false
+    }
 }
